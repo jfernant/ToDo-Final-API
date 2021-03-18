@@ -18,6 +18,7 @@ function Todo(){
       todosRef.on('value', (snapshot)=>{
         const fb_todos = snapshot.val();
         const newTodos = [];
+        
         for (let fb_id in fb_todos) {
           newTodos.push({...fb_todos[fb_id], fb_id});
         }
