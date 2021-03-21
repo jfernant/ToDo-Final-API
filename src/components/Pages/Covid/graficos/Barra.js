@@ -39,7 +39,7 @@ function Barra({confirmed,critical,deaths,recovered}){
         'rgba(153, 102, 255, 1)',
         'rgba(255, 159, 64, 1)'
         ],
-      label: ['Total de casos: '],  
+      label: ['Total de casos'],  
       data:[deaths,critical,confirmed,recovered]
       }
   ]
