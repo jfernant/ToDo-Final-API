@@ -3,7 +3,7 @@ import {Bar} from 'react-chartjs-2';
 function Barra({confirmed,critical,deaths,recovered}){
 
   const data ={
-    labels: ['Muertes', 'Casos Criticos', 'Casos Confirmados', 'Recuperados'],
+    labels: ['Muertes: '+deaths, 'Casos Criticos: '+critical, 'Casos Confirmados: '+confirmed, 'Recuperados: '+recovered],
     datasets:[
       {
       backgroundColor: [

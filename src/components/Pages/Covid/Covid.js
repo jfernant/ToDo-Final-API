@@ -83,6 +83,9 @@ function Covid (){
         recovered={recovered}
       >
       </Dona>
+      <div className="flex items-center w-full overflow-hidden">
+        <h3 className="text-base sm:text-xl font-semibold text-center w-full p-9">Last Update: {lastUpdate}</h3>
+      </div>
       {/* <LineDemo></LineDemo>
       <BarChart dato="100"></BarChart>
       <div className="p-10">

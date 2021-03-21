@@ -3,12 +3,7 @@ import {Doughnut} from 'react-chartjs-2';
 
 const Dona = ({confirmed,critical,deaths,recovered}) => {
     const data = {
-        labels: [
-            'Deaths',
-            'Confirmados',
-            'Critical',            
-            'Recovered'
-        ],
+        labels: ['Muertes: '+deaths, 'Casos Confirmados: '+confirmed, 'Casos Criticos: '+critical, 'Recuperados: '+recovered],
         datasets: [{
             data: [deaths, confirmed, critical, recovered],
             backgroundColor: [
