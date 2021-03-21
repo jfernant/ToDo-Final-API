@@ -2,9 +2,7 @@ import {useState,useEffect} from 'react';
 import firebaseSDK from '../../../FirebaseInit';
 import getCountryCodeTotal from './CovidApi';
 import Barra from './graficos/Barra';
-import LineDemo from './graficos/grafico1';
-import BarChart from './graficos/grafico2';
-import Dona from './graficos/grafico4';
+import Dona from './graficos/Dona';
 
 function Covid (){
   
@@ -67,7 +65,7 @@ function Covid (){
   return (
     <section>
       <div className="flex items-center w-full overflow-hidden">
-        <h2 class="text-xl sm:text-3xl font-semibold text-center w-full m-5">Coronavirus in Honduras</h2>
+        <h2 class="text-xl sm:text-3xl font-semibold text-center w-full m-5">Coronavirus in {country} ({code})</h2>
       </div>
       <Barra 
         confirmed={confirmed}
@@ -86,19 +84,6 @@ function Covid (){
       <div className="flex items-center w-full overflow-hidden">
         <h3 className="text-base sm:text-xl font-semibold text-center w-full p-9">Last Update: {lastUpdate}</h3>
       </div>
-      {/* <LineDemo></LineDemo>
-      <BarChart dato="100"></BarChart>
-      <div className="p-10">
-          <h2 className="p-1">DATOS</h2>
-          <h2 className="p-1">code: {code}</h2>
-          <h2 className="p-1">confirmed: {confirmed}</h2>
-          <h2 className="p-1">country: {country}</h2>
-          <h2 className="p-1">critical: {critical}</h2>
-          <h2 className="p-1">deaths: {deaths}</h2>
-          <h2 className="p-1">lastChange: {lastChange}</h2>
-          <h2 className="p-1">lastUpdate: {lastUpdate}</h2>
-          <h2 className="p-1">recovered: {recovered}</h2>
-      </div> */}
     </section>
   );
 }
