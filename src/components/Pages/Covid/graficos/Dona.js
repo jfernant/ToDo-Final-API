@@ -3,7 +3,6 @@ import {Doughnut} from 'react-chartjs-2';
 
 const Dona = ({confirmed,critical,deaths,recovered}) => {
     const data = {
-        label: ['Total de casos'],
         labels: ['Muertes: '+deaths, 'Casos Confirmados: '+confirmed, 'Casos Criticos: '+critical, 'Recuperados: '+recovered],
         datasets: [{
             data: [deaths, confirmed, critical, recovered],
